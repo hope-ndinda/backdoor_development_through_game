@@ -1,6 +1,5 @@
 # Cyber Runner - Educational Backdoor Game
 
-**Rwanda Coding Academy - Cybersecurity Course Assignment**
 
 ## Overview
 
@@ -31,6 +30,28 @@ Cyber Runner is an educational Temple Run-style endless runner game that demonst
 
 ## Installation & Setup
 
+### Option 1: Using Executables (Recommended)
+For users who want to run the game without installing dependencies:
+
+#### Linux Users:
+1. Download the Linux executables from the `release/` directory
+2. Make the files executable:
+   ```bash
+   chmod +x CyberRunner CyberRunnerCleaner
+   ```
+3. Run the game:
+   ```bash
+   ./CyberRunner
+   ```
+
+#### Windows Users:
+1. Run `build_windows.bat` on a Windows machine to create .exe files
+2. Download the Windows executables from the `release/` directory
+3. Double-click `CyberRunner.exe` to start the game
+
+### Option 2: From Source Code
+For developers who want to modify the code:
+
 ### Prerequisites
 - Python 3.7 or higher
 - Virtual Machine (strongly recommended)
@@ -40,23 +61,51 @@ Cyber Runner is an educational Temple Run-style endless runner game that demonst
 
 1. **Clone or download the project files**
    ```bash
-   git clone <repository-url>
-   cd cyber-runner
+   git clone https://github.com/hope-ndinda/backdoor_development_through_game.git
+   cd backdoor_development_through_game
    ```
 
-2. **Install required dependencies**
+2. **Create virtual environment**
+   ```bash
+   python3 -m venv .ven
+   source .ven/bin/activate  # Linux/Mac
+   # or .ven\Scripts\activate  # Windows
+   ```
+
+3. **Install required dependencies**
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Run the game**
+4. **Run the game**
    ```bash
    python main.py
    ```
 
+### Building Executables
+
+#### Linux/Mac:
+```bash
+python build.py
+```
+
+#### Windows:
+```bash
+build_windows.bat
+```
+
+This will create standalone executables in the `dist/` directory and a complete release package in `release/`.
+
 ## Usage Instructions
 
 ### Starting the Game
+
+#### Using Executables:
+1. Run `CyberRunner` (Linux) or `CyberRunner.exe` (Windows)
+2. Read the educational disclaimer carefully
+3. Press SPACE to continue or ESC to exit
+
+#### Using Source Code:
 1. Run `python main.py`
 2. Read the educational disclaimer carefully
 3. Press SPACE to continue or ESC to exit
@@ -87,8 +136,19 @@ cyber-runner/
 ├── main.py              # Main game application
 ├── backdoor_utils.py    # Backdoor functionality
 ├── cleanup.py          # Removal utility
+├── build.py            # Linux/Mac build script
+├── build_windows.bat   # Windows build script
 ├── requirements.txt    # Python dependencies
-└── README.md          # This documentation
+├── README.md          # This documentation
+├── .gitignore         # Git ignore rules
+├── dist/              # Compiled executables
+│   ├── CyberRunner           # Linux game executable
+│   └── CyberRunnerCleaner    # Linux cleanup executable
+└── release/           # Release package with executables
+    ├── CyberRunner.exe       # Windows game executable
+    ├── CyberRunnerCleaner.exe # Windows cleanup executable
+    ├── README.md            # Documentation
+    └── USAGE.txt            # Quick start guide
 ```
 
 ### Core Components
@@ -192,15 +252,17 @@ Run with verbose logging:
 python backdoor_utils.py --help
 ```
 
-## Cleanup Procedure
+### Cleanup Procedure
 
-### Automated Cleanup
-Use the provided cleanup utility:
+#### Using Executables (Recommended):
+Run the provided cleanup utility:
 ```bash
-python cleanup.py
+./CyberRunnerCleaner  # Linux
+# or
+CyberRunnerCleaner.exe  # Windows
 ```
 
-### Manual Cleanup Steps
+#### Manual Cleanup Steps:
 1. Stop all running processes
 2. Remove startup entries (crontab/registry/launch agents)
 3. Delete configuration directory: `~/.cyber_runner`
