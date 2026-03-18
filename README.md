@@ -206,35 +206,6 @@ python cleanup.py
 3. Delete configuration directory: `~/.cyber_runner`
 4. Remove project files
 
-## Grading Criteria Alignment
-
-This project addresses all assignment requirements:
-
-### Game Functionality (15 points)
-- ✓ User notification before execution
-- ✓ Dependency installation from local server
-- ✓ Uninterrupted gameplay experience
-- ✓ Shell access for listener
-
-### Persistence & Security (10 points)
-- ✓ Cross-platform persistence mechanisms
-- ✓ Survives system restarts
-- ✓ Interruption prevention
-
-### User Protection (10 points)
-- ✓ Educational disclaimers
-- ✓ VM-only usage warnings
-- ✓ Comprehensive cleanup utility
-
-### Documentation (10 points)
-- ✓ Complete technical documentation
-- ✓ Usage instructions
-- ✓ Security considerations
-
-### Innovation & Creativity (5 points)
-- ✓ Temple Run-style game integration
-- ✓ Progressive difficulty system
-- ✓ Educational shell interface
 
 ## Ethical Usage Statement
 
@@ -245,8 +216,3 @@ This project is developed exclusively for cybersecurity education at Rwanda Codi
 - Follow ethical hacking guidelines
 - Contribute positively to cybersecurity knowledge
 
-**"Defending Rwanda Cyberspace"**
-
----
-
-*Assignment Completed for Rwanda Coding Academy Cybersecurity Course*
